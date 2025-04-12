@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DRWPP.com style - Clean minimalist approach */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    /* Couleurs de carte */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    /* Couleurs de popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Couleur primaire - Noir pur */
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Couleur secondaire - Gris très léger */
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 0%;
+
+    /* Couleurs neutres */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Couleur d'accent - Noir */
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Couleur destructive */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Bordures et autres éléments */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+
+    --radius: 0rem;
+  }
+
+  .dark {
+    /* DRWPP.com dark mode - Élégant et minimaliste */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+
+    /* Couleurs de carte */
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    /* Couleurs de popover */
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Couleur primaire - Blanc pur */
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 8%;
+
+    /* Couleur secondaire - Gris foncé */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Couleurs neutres */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Couleur d'accent - Blanc */
+    --accent: 0 0% 98%;
+    --accent-foreground: 0 0% 8%;
+
+    /* Couleur destructive */
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Bordures et autres éléments */
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-light;
+    letter-spacing: 0.02em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-normal tracking-wide;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  .drwpp-btn {
+    @apply py-3 px-6 uppercase text-xs font-normal tracking-widest transition-all duration-300 inline-block;
+  }
+  
+  .drwpp-btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90;
+  }
+  
+  .drwpp-btn-outline {
+    @apply border border-border hover:border-foreground;
+  }
+  
+  .drwpp-nav-link {
+    @apply uppercase text-xs tracking-widest font-normal hover:opacity-70 transition-opacity;
+  }
+}
+
+/* Custom styles for the editor */
+.canvas-container {
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* DRWPP specific styled sections */
+.drwpp-hero {
+  @apply relative py-20 md:py-32;
+}
+
+.drwpp-section {
+  @apply py-16 md:py-24;
+}
+
+.drwpp-section-title {
+  @apply text-2xl md:text-3xl uppercase tracking-widest mb-10 text-center font-normal;
+}
+
