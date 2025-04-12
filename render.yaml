@@ -3,11 +3,17 @@ services:
     name: drwpp-canvas-mvp
     runtime: node
     plan: free
-    buildCommand: npm install --legacy-peer-deps && npm run build
+    buildCommand: |
+      npm cache clean --force
+      rm -rf node_modules package-lock.json
+      npm install --no-fund --no-audit --legacy-peer-deps
+      npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: NPM_CONFIG_LEGACY_PEER_DEPS
         value: "true"
+      - key: NODE_VERSION
+        value: "20.x"
     autoDeploy: true
