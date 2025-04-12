@@ -4,8 +4,9 @@ services:
     runtime: node
     plan: free
     buildCommand: |
+      export NODE_OPTIONS="--max_old_space_size=4096"
       npm cache clean --force
-      rm -rf node_modules package-lock.json
+      rm -rf node_modules package-lock.json .next
       npm install --no-fund --no-audit --legacy-peer-deps
       npm run build
     startCommand: npm start
@@ -15,5 +16,7 @@ services:
       - key: NPM_CONFIG_LEGACY_PEER_DEPS
         value: "true"
       - key: NODE_VERSION
-        value: "20.x"
+        value: "18.x"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
     autoDeploy: true

@@ -1,15 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Montserrat } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
-
-const montserrat = Montserrat({ 
-  subsets: ["latin"],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '900'],
-  variable: '--font-montserrat',
-})
 
 export const metadata: Metadata = {
   title: "DRWPP STUDIO - Personnalisation de Wall Art",
@@ -24,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${montserrat.className} antialiased`}>
+      <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Header />
           {children}
