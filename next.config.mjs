@@ -1,3 +1,5 @@
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -14,6 +16,33 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+  },
+  webpack: (config, { isServer }) => {
+    // Add path alias configuration to webpack
+    if (config.resolve) {
+      if (!config.resolve.alias) {
+        config.resolve.alias = {};
+      }
+      
+      // Define path aliases
+      Object.assign(config.resolve.alias, {
+        '@': path.resolve('./'),
+        '@components': path.resolve('./components'),
+        '@lib': path.resolve('./lib'),
+        '@app': path.resolve('./app'),
+      });
+    } else {
+      config.resolve = { 
+        alias: { 
+          '@': path.resolve('./'),
+          '@components': path.resolve('./components'),
+          '@lib': path.resolve('./lib'),
+          '@app': path.resolve('./app'),
+        } 
+      };
+    }
+    
+    return config;
   },
 }
 

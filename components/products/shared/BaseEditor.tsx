@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { useDesignStore } from "@/lib/store"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useDesignStore } from "@lib/store"
+import { Button } from "@components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@components/ui/tabs"
 import { 
   Upload, 
   Image as ImageIcon, 

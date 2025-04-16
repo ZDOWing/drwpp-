@@ -1,8 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import Header from "@/components/header"
+import { ThemeProvider } from "@components/theme-provider"
+import Header from "@components/header"
 
 export const metadata: Metadata = {
   title: "DRWPP STUDIO - Personnalisation de Wall Art",

@@ -1,0 +1,164 @@
+{
+  "formats": [
+    {
+      "id": "square",
+      "name": "Carré",
+      "description": "Format carré pour les designs",
+      "uuid": "bbe5a658-cabe-4d38-9c07-097929f33f95",
+      "dimensions": {
+        "width": 500,
+        "height": 500
+      },
+      "printArea": {
+        "x": 50,
+        "y": 50,
+        "width": 400,
+        "height": 400,
+        "rotation": 0
+      },
+      "variations": [
+        {
+          "id": "square_white",
+          "name": "Carré Blanc",
+          "color": "Blanc",
+          "size": "500x500",
+          "mockupUuid": "bbe5a658-cabe-4d38-9c07-097929f33f95",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/square-white.jpg"
+        },
+        {
+          "id": "square_black",
+          "name": "Carré Noir",
+          "color": "Noir",
+          "size": "500x500",
+          "mockupUuid": "bbe5a658-cabe-4d38-9c07-097929f33f95",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/square-black.jpg"
+        }
+      ]
+    },
+    {
+      "id": "portrait",
+      "name": "Portrait",
+      "description": "Format portrait pour les designs",
+      "uuid": "da2e7637-bf51-4e3b-a184-3caeae3e7dac",
+      "dimensions": {
+        "width": 400,
+        "height": 600
+      },
+      "printArea": {
+        "x": 50,
+        "y": 50,
+        "width": 300,
+        "height": 500,
+        "rotation": 0
+      },
+      "variations": [
+        {
+          "id": "portrait_white",
+          "name": "Portrait Blanc",
+          "color": "Blanc",
+          "size": "400x600",
+          "mockupUuid": "da2e7637-bf51-4e3b-a184-3caeae3e7dac",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/portrait-white.jpg"
+        },
+        {
+          "id": "portrait_black",
+          "name": "Portrait Noir",
+          "color": "Noir",
+          "size": "400x600",
+          "mockupUuid": "da2e7637-bf51-4e3b-a184-3caeae3e7dac",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/portrait-black.jpg"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "poster",
+      "name": "Poster",
+      "description": "Poster haute qualité",
+      "defaultPrintArea": {
+        "x": 50,
+        "y": 50,
+        "width": 300,
+        "height": 500,
+        "rotation": 0
+      },
+      "variations": [
+        {
+          "id": "poster_square_white",
+          "name": "Poster Carré Blanc",
+          "color": "Blanc",
+          "size": "500x500",
+          "mockupUuid": "bbe5a658-cabe-4d38-9c07-097929f33f95",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/square-white.jpg",
+          "printArea": {
+            "x": 50,
+            "y": 50,
+            "width": 400,
+            "height": 400,
+            "rotation": 0
+          }
+        },
+        {
+          "id": "poster_portrait_white",
+          "name": "Poster Portrait Blanc",
+          "color": "Blanc",
+          "size": "400x600",
+          "mockupUuid": "da2e7637-bf51-4e3b-a184-3caeae3e7dac",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/portrait-white.jpg",
+          "printArea": {
+            "x": 50,
+            "y": 50,
+            "width": 300,
+            "height": 500,
+            "rotation": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "canvas",
+      "name": "Toile Canvas",
+      "description": "Impression sur toile tendue sur châssis",
+      "defaultPrintArea": {
+        "x": 50,
+        "y": 50,
+        "width": 400,
+        "height": 400,
+        "rotation": 0
+      },
+      "variations": [
+        {
+          "id": "canvas_square_white",
+          "name": "Canvas Carré Blanc",
+          "color": "Blanc",
+          "size": "500x500",
+          "mockupUuid": "bbe5a658-cabe-4d38-9c07-097929f33f95",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/canvas-square-white.jpg",
+          "printArea": {
+            "x": 50,
+            "y": 50,
+            "width": 400,
+            "height": 400,
+            "rotation": 0
+          }
+        },
+        {
+          "id": "canvas_portrait_white",
+          "name": "Canvas Portrait Blanc",
+          "color": "Blanc",
+          "size": "400x600",
+          "mockupUuid": "da2e7637-bf51-4e3b-a184-3caeae3e7dac",
+          "backgroundUrl": "https://storage.googleapis.com/mockups-backgrounds/canvas-portrait-white.jpg",
+          "printArea": {
+            "x": 50,
+            "y": 50,
+            "width": 300,
+            "height": 500,
+            "rotation": 0
+          }
+        }
+      ]
+    }
+  ]
+}

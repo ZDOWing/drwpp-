@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { useDesignStore } from "@/lib/store"
+import { useDesignStore } from "@lib/store"
 import BaseEditor from "../shared/BaseEditor"
 import CanvasFabricCanvas from "./CanvasFabricCanvas"
-import { Button } from "@/components/ui/button"
+import { Button } from "@components/ui/button"
 import { 
   ZoomIn, 
   ZoomOut, 
@@ -13,10 +13,10 @@ import {
   FlipHorizontal,
   FlipVertical
 } from "lucide-react"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@components/ui/select"
+import { Slider } from "@components/ui/slider"
+import { RadioGroup, RadioGroupItem } from "@components/ui/radio-group"
+import { Label } from "@components/ui/label"
 
 // Canvas format configurations
 const canvasFormats = {
@@ -261,6 +261,15 @@ export default function CanvasEditor() {
     )
   }
   
+  // Handle scale change from canvas
+  const handleScaleChange = (newScale: number) => {
+    setDesign({
+      ...design,
+      scale: newScale,
+      hasChanges: true
+    })
+  }
+
   return (
     <BaseEditor
       onPreview={() => setPreviewMode(true)}
@@ -270,7 +279,7 @@ export default function CanvasEditor() {
       <CanvasFabricCanvas 
         formatType={formatType}
         formatSize={formatSize}
-        onScaleChange={setScale}
+        onScaleChange={handleScaleChange}
       />
     </BaseEditor>
   )

@@ -1,6 +1,6 @@
 "use client"
 
-import ProductNavigation from "@/components/products/shared/ProductNavigation"
+import ProductNavigation from "@components/products/shared/ProductNavigation"
 
 export default function ProductsLayout({
   children,
